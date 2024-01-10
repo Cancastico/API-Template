@@ -552,8 +552,8 @@ export namespace Prisma {
   export import Exact = $Public.Exact
 
   /**
-   * Prisma Client JS version: 5.5.2
-   * Query Engine version: aebc046ce8b88ebbcb45efe31cbe7d06fd6abc0a
+   * Prisma Client JS version: 5.8.0
+   * Query Engine version: 0a83d8541752d7582de2ebc1ece46519ce72a848
    */
   export type PrismaVersion = {
     client: string
@@ -3487,7 +3487,7 @@ export namespace Prisma {
   type pedidos_vendaGetPayload<S extends boolean | null | undefined | pedidos_vendaDefaultArgs> = $Result.GetResult<Prisma.$pedidos_vendaPayload, S>
 
   type pedidos_vendaCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<pedidos_vendaFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<pedidos_vendaFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Pedidos_vendaCountAggregateInputType | true
     }
 
@@ -4592,7 +4592,7 @@ export namespace Prisma {
   type pedidos_venda_itensGetPayload<S extends boolean | null | undefined | pedidos_venda_itensDefaultArgs> = $Result.GetResult<Prisma.$pedidos_venda_itensPayload, S>
 
   type pedidos_venda_itensCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<pedidos_venda_itensFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<pedidos_venda_itensFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Pedidos_venda_itensCountAggregateInputType | true
     }
 
@@ -5669,7 +5669,7 @@ export namespace Prisma {
   type produtos_movimentacoesGetPayload<S extends boolean | null | undefined | produtos_movimentacoesDefaultArgs> = $Result.GetResult<Prisma.$produtos_movimentacoesPayload, S>
 
   type produtos_movimentacoesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<produtos_movimentacoesFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<produtos_movimentacoesFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Produtos_movimentacoesCountAggregateInputType | true
     }
 
@@ -6656,7 +6656,7 @@ export namespace Prisma {
   type certificadoGetPayload<S extends boolean | null | undefined | certificadoDefaultArgs> = $Result.GetResult<Prisma.$certificadoPayload, S>
 
   type certificadoCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<certificadoFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<certificadoFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: CertificadoCountAggregateInputType | true
     }
 
@@ -7779,7 +7779,7 @@ export namespace Prisma {
   type clientesGetPayload<S extends boolean | null | undefined | clientesDefaultArgs> = $Result.GetResult<Prisma.$clientesPayload, S>
 
   type clientesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<clientesFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<clientesFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: ClientesCountAggregateInputType | true
     }
 
@@ -8849,7 +8849,7 @@ export namespace Prisma {
   type clientes_x_produtosGetPayload<S extends boolean | null | undefined | clientes_x_produtosDefaultArgs> = $Result.GetResult<Prisma.$clientes_x_produtosPayload, S>
 
   type clientes_x_produtosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<clientes_x_produtosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<clientes_x_produtosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Clientes_x_produtosCountAggregateInputType | true
     }
 
@@ -9739,7 +9739,7 @@ export namespace Prisma {
   type condicoes_pagamentoGetPayload<S extends boolean | null | undefined | condicoes_pagamentoDefaultArgs> = $Result.GetResult<Prisma.$condicoes_pagamentoPayload, S>
 
   type condicoes_pagamentoCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<condicoes_pagamentoFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<condicoes_pagamentoFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Condicoes_pagamentoCountAggregateInputType | true
     }
 
@@ -10642,7 +10642,7 @@ export namespace Prisma {
   type contatosGetPayload<S extends boolean | null | undefined | contatosDefaultArgs> = $Result.GetResult<Prisma.$contatosPayload, S>
 
   type contatosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<contatosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<contatosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: ContatosCountAggregateInputType | true
     }
 
@@ -11587,7 +11587,7 @@ export namespace Prisma {
   type docreferenciadoGetPayload<S extends boolean | null | undefined | docreferenciadoDefaultArgs> = $Result.GetResult<Prisma.$docreferenciadoPayload, S>
 
   type docreferenciadoCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<docreferenciadoFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<docreferenciadoFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: DocreferenciadoCountAggregateInputType | true
     }
 
@@ -12643,7 +12643,7 @@ export namespace Prisma {
   type enderecosGetPayload<S extends boolean | null | undefined | enderecosDefaultArgs> = $Result.GetResult<Prisma.$enderecosPayload, S>
 
   type enderecosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<enderecosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<enderecosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: EnderecosCountAggregateInputType | true
     }
 
@@ -13773,7 +13773,7 @@ export namespace Prisma {
   type fornecedoresGetPayload<S extends boolean | null | undefined | fornecedoresDefaultArgs> = $Result.GetResult<Prisma.$fornecedoresPayload, S>
 
   type fornecedoresCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<fornecedoresFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<fornecedoresFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: FornecedoresCountAggregateInputType | true
     }
 
@@ -14676,7 +14676,7 @@ export namespace Prisma {
   type listas_precosGetPayload<S extends boolean | null | undefined | listas_precosDefaultArgs> = $Result.GetResult<Prisma.$listas_precosPayload, S>
 
   type listas_precosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<listas_precosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<listas_precosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Listas_precosCountAggregateInputType | true
     }
 
@@ -15604,7 +15604,7 @@ export namespace Prisma {
   type listas_precos_x_produtosGetPayload<S extends boolean | null | undefined | listas_precos_x_produtosDefaultArgs> = $Result.GetResult<Prisma.$listas_precos_x_produtosPayload, S>
 
   type listas_precos_x_produtosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<listas_precos_x_produtosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<listas_precos_x_produtosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Listas_precos_x_produtosCountAggregateInputType | true
     }
 
@@ -16489,7 +16489,7 @@ export namespace Prisma {
   type nfeconfigGetPayload<S extends boolean | null | undefined | nfeconfigDefaultArgs> = $Result.GetResult<Prisma.$nfeconfigPayload, S>
 
   type nfeconfigCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<nfeconfigFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<nfeconfigFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: NfeconfigCountAggregateInputType | true
     }
 
@@ -18281,7 +18281,7 @@ export namespace Prisma {
   type notafiscalGetPayload<S extends boolean | null | undefined | notafiscalDefaultArgs> = $Result.GetResult<Prisma.$notafiscalPayload, S>
 
   type notafiscalCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<notafiscalFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<notafiscalFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: NotafiscalCountAggregateInputType | true
     }
 
@@ -20248,7 +20248,7 @@ export namespace Prisma {
   type notafiscalitemGetPayload<S extends boolean | null | undefined | notafiscalitemDefaultArgs> = $Result.GetResult<Prisma.$notafiscalitemPayload, S>
 
   type notafiscalitemCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<notafiscalitemFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<notafiscalitemFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: NotafiscalitemCountAggregateInputType | true
     }
 
@@ -21253,7 +21253,7 @@ export namespace Prisma {
   type notafiscalpagamentosGetPayload<S extends boolean | null | undefined | notafiscalpagamentosDefaultArgs> = $Result.GetResult<Prisma.$notafiscalpagamentosPayload, S>
 
   type notafiscalpagamentosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<notafiscalpagamentosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<notafiscalpagamentosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: NotafiscalpagamentosCountAggregateInputType | true
     }
 
@@ -22270,7 +22270,7 @@ export namespace Prisma {
   type pedido_compra_itensGetPayload<S extends boolean | null | undefined | pedido_compra_itensDefaultArgs> = $Result.GetResult<Prisma.$pedido_compra_itensPayload, S>
 
   type pedido_compra_itensCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<pedido_compra_itensFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<pedido_compra_itensFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Pedido_compra_itensCountAggregateInputType | true
     }
 
@@ -23197,7 +23197,7 @@ export namespace Prisma {
   type pedido_compra_pagamentosGetPayload<S extends boolean | null | undefined | pedido_compra_pagamentosDefaultArgs> = $Result.GetResult<Prisma.$pedido_compra_pagamentosPayload, S>
 
   type pedido_compra_pagamentosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<pedido_compra_pagamentosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<pedido_compra_pagamentosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Pedido_compra_pagamentosCountAggregateInputType | true
     }
 
@@ -24180,7 +24180,7 @@ export namespace Prisma {
   type pedidos_compraGetPayload<S extends boolean | null | undefined | pedidos_compraDefaultArgs> = $Result.GetResult<Prisma.$pedidos_compraPayload, S>
 
   type pedidos_compraCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<pedidos_compraFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<pedidos_compraFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Pedidos_compraCountAggregateInputType | true
     }
 
@@ -25109,7 +25109,7 @@ export namespace Prisma {
   type pedidos_venda_pagamentosGetPayload<S extends boolean | null | undefined | pedidos_venda_pagamentosDefaultArgs> = $Result.GetResult<Prisma.$pedidos_venda_pagamentosPayload, S>
 
   type pedidos_venda_pagamentosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<pedidos_venda_pagamentosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<pedidos_venda_pagamentosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Pedidos_venda_pagamentosCountAggregateInputType | true
     }
 
@@ -26171,7 +26171,7 @@ export namespace Prisma {
   type produtosGetPayload<S extends boolean | null | undefined | produtosDefaultArgs> = $Result.GetResult<Prisma.$produtosPayload, S>
 
   type produtosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<produtosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<produtosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: ProdutosCountAggregateInputType | true
     }
 
@@ -27449,7 +27449,7 @@ export namespace Prisma {
   type vendedoresGetPayload<S extends boolean | null | undefined | vendedoresDefaultArgs> = $Result.GetResult<Prisma.$vendedoresPayload, S>
 
   type vendedoresCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<vendedoresFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<vendedoresFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: VendedoresCountAggregateInputType | true
     }
 
@@ -28383,7 +28383,7 @@ export namespace Prisma {
   type vendedores_x_usuariosGetPayload<S extends boolean | null | undefined | vendedores_x_usuariosDefaultArgs> = $Result.GetResult<Prisma.$vendedores_x_usuariosPayload, S>
 
   type vendedores_x_usuariosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<vendedores_x_usuariosFindManyArgs, 'select' | 'include' | 'distinct' > & {
+    Omit<vendedores_x_usuariosFindManyArgs, 'select' | 'include' | 'distinct'> & {
       select?: Vendedores_x_usuariosCountAggregateInputType | true
     }
 
