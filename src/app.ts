@@ -19,8 +19,14 @@ if (cluster.isPrimary) {
 	});
 } else {
 	const app = express();
+	
+	app.use(cors({
+		origin: ['localhost', '192.168.0.183']
+	}));
+
+
 	app.use(express.json());
-	app.use(cors());
+
 	app.use(router);
 
 	app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
