@@ -1,4 +1,4 @@
-export class ErrorResponse extends Error {
+export class error_response extends Error {
 	constructor(public code: number, message: string) {
 		super(message);
 	} 

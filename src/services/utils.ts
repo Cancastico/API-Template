@@ -3,18 +3,8 @@ import jwt from 'jsonwebtoken';
 import { ParamFilter, ParamProps } from '../models/utils.model';
 import { IncomingHttpHeaders } from 'http';
 import { Request } from 'express';
-import { ErrorResponse } from './ErrorService';
+import { error_response } from './error_service';
 
-export class Utils_service {
-	decodeToken(token:string){
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		const decoded: any = jwt.verify(token, process.env.JWT_SECRET!);
-		if (!decoded || !decoded.id_company) {
-			throw new Error('Invalid JWT');
-		}
-		return decoded;
-	}
-}
 export function  ParamFilterFormater(Params: ParamFilter[]) {
 	for (const param of Params) {
 		if (param.value === '' || param.value === undefined || param.value === null) {
@@ -47,14 +37,6 @@ export function  ParamFilterFormater(Params: ParamFilter[]) {
 	}
 	return Params;
 }
-export function decodeToken(token:string){
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const decoded: any = jwt.verify(token, process.env.JWT_SECRET!);
-	if (!decoded || !decoded.id_company) {
-		throw new Error('Invalid JWT');
-	}
-	return decoded;
-}
 //transforma o Req.query nos filtros e configurações do get
 export function GetPropsAndFilters(Req:Request){
 	let ParamConfig: ParamProps[] = [];
@@ -76,6 +58,23 @@ export function GetPropsAndFilters(Req:Request){
 		}
 	}
 	return {ParamConfig,ParamFilter};
+}
+export function getAuthorization(ReqHeader: IncomingHttpHeaders):string{
+	let authorization  = ReqHeader.authorization ?? '';
+	if(authorization != ''){
+		authorization = authorization.split(' ')[1];
+		return authorization;
+	}else{
+		throw new error_response(400,'Token Invalido');
+	}
+}
+export function decodeToken(token:string){
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const decoded: any = jwt.verify(token, process.env.JWT_SECRET!);
+	if (!decoded || !decoded.id_company) {
+		throw new Error('Invalid JWT');
+	}
+	return decoded;
 }
 //Monta o Query para fazer o Get no Prisma
 // export function buildQuery(selectors?: ParamFilter[], params?: ParamProps[]): IQuery {
@@ -136,17 +135,14 @@ export function GetPropsAndFilters(Req:Request){
 // }
 //Pega o Token do Header
 
-export function getAuthorization(ReqHeader: IncomingHttpHeaders):string{
-	let authorization  = ReqHeader.authorization ?? '';
-	if(authorization != ''){
-		authorization = authorization.split(' ')[1];
-		return authorization;
-	}else{
-		throw new ErrorResponse(400,'Token Invalido');
-	}
-}
+
 // Função para converter campos BigInt em strings
 export function convertBigIntToString(obj: any){
+	///||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||Z
+	///VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+	///FUNÇÃO DESNECESSARIA, O PRISMA CONVERTE COM PROPRIEDADES PROPRIAS DE FORMA MAIS EFICIENTE
+	///AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	///||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 	for (const key in obj) {
 		if (Object.prototype.hasOwnProperty.call(obj, key)) {
 			if (typeof obj[key] === 'bigint') {
@@ -156,6 +152,7 @@ export function convertBigIntToString(obj: any){
 	}
 	return obj;
 }
+
 export function decimalToNumber(decimal:any):number{
 	const number = parseFloat(decimal ?? '0');
 	return number;

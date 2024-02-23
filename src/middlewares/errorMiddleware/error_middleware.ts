@@ -1,13 +1,13 @@
 import { NextFunction, Request, Response } from 'express';
 import { RequestHandler } from 'express-serve-static-core';
-import { ErrorResponse } from '../../services/ErrorService';
-import { CustomRequest } from '../../models/utils.model';
+import { error_response } from '../../services/error_service';
+import { custom_request } from '../../models/utils.model';
 
 
-export class ErrorMiddleware {
+export class error_middleware {
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	public handle(err: Error, req: Request, res: Response, next: NextFunction) {
-		if (err instanceof ErrorResponse)
+		if (err instanceof error_response)
 			return res.status(err.code).json({ message: err.message });
 
 		return res.status(500).json({ erro: 'Internal Server Error' });
@@ -15,7 +15,7 @@ export class ErrorMiddleware {
 
 	public handleAsync =
 		(fn: RequestHandler) =>
-			async (req: CustomRequest, res: Response, next: NextFunction) => {
+			async (req: custom_request, res: Response, next: NextFunction) => {
 				try {
 					await Promise.resolve(fn(req, res, next));
 					next();

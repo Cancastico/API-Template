@@ -19,6 +19,6 @@ export interface IQuery {
     orderBy?: any;
     }
 
-export interface CustomRequest extends Request{
+export interface custom_request extends Request{
     prisma: PrismaClient;
 }

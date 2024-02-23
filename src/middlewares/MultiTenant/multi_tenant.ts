@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextFunction, RequestHandler, Response } from 'express';
-import { CustomRequest } from '../../models/utils.model';
+import { custom_request } from '../../models/utils.model';
 import { createPrismaClientFromJWT } from '../../prisma';
-import { ErrorResponse } from '../../services/ErrorService';
+import { error_response } from '../../services/error_service';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export class PrismaMiddleware {
+export class prisma_middleware {
 	public handleAsync =
 		(fn: RequestHandler) =>
-			async (req: CustomRequest, res: Response, next: NextFunction) => {
+			async (req: custom_request, res: Response, next: NextFunction) => {
 				try {
 					const authHeader = req.headers.authorization;
 
@@ -28,7 +28,7 @@ export class PrismaMiddleware {
 						return res.status(401).send({ error: 'Token malformatted' });
 					}
 					req.prisma = await createPrismaClientFromJWT(token);
-					if(req.prisma == undefined){throw new ErrorResponse(500,'Não foi possivel Gerar Conexão com o Banco');}
+					if(req.prisma == undefined){throw new error_response(500,'Não foi possivel Gerar Conexão com o Banco');}
 					
 
 
